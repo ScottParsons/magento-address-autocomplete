@@ -1,0 +1,10 @@
+{
+  "name": "turkinox/magento-address-autocomplete",
+  "license": "MIT",
+  "type": "magento-module",
+  "description": "A Magento module that uses the Google Places API to populate the address fields on the checkout.",
+  "homepage": "https://github.com/Turiknox/magento-address-autocomplete",
+  "require": {
+    "magento-hackathon/magento-composer-installer": "*"
+  }
+}

@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!--
+/*
+ * Turiknox_AddressAutocomplete
+
+ * @category   Turiknox
+ * @package    Turiknox_AddressAutocomplete
+ * @copyright  Copyright (c) 2017 Turiknox
+ * @license    https://github.com/Turiknox/magento-address-autocomplete/blob/master/LICENSE.md
+ * @version    1.0.0
+ */
+-->
+<layout>
+    <checkout_onepage_index>
+        <update handle="address_autocomplete" />
+    </checkout_onepage_index>
+
+    <!-- IWD One Page Checkout support -->
+    <opc_index_index>
+        <update handle="address_autocomplete" />
+    </opc_index_index>
+
+    <!-- aheadWorks One Step Checkout support -->
+    <aw_onestepcheckout_index_index>
+        <update handle="address_autocomplete" />
+    </aw_onestepcheckout_index_index>
+
+    <!-- Unicode One Step Checkout support -->
+    <unicode_onestep_checkout>
+        <update handle="address_autocomplete" />
+    </unicode_onestep_checkout>
+
+    <!-- OYE Advanced Checkout support -->
+    <oye_onestep_checkout>
+        <update handle="address_autocomplete" />
+    </oye_onestep_checkout>
+
+    <!-- Fancy Checkout One Step Checkout support -->
+    <fancycheckout_index_index>
+        <update handle="address_autocomplete" />
+    </fancycheckout_index_index>
+
+    <address_autocomplete>
+        <reference name="head">
+            <action method="addItem">
+                <type>js</type>
+                <name>turiknox/addressautocomplete.js</name>
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="turiknox_addressautocomplete/js" name="turiknox.addressautocomplete.js"
+                   as="autocomplete_js" template="addressautocomplete/js.phtml" />
+            <block type="turiknox_addressautocomplete/js" name="turiknox.addressautocomplete.autocomplete"
+                   as="autocomplete" template="addressautocomplete/checkout/autocomplete.phtml" />
+        </reference>
+    </address_autocomplete>
+</layout>

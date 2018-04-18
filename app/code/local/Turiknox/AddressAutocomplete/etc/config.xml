@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<!--
+/*
+ * Turiknox_AddressAutocomplete
+
+ * @category   Turiknox
+ * @package    Turiknox_AddressAutocomplete
+ * @copyright  Copyright (c) 2017 Turiknox
+ * @license    https://github.com/Turiknox/magento-address-autocomplete/blob/master/LICENSE.md
+ * @version    1.0.0
+ */
+-->
+<config>
+    <modules>
+        <Turiknox_AddressAutocomplete>
+            <version>1.0.0</version>
+        </Turiknox_AddressAutocomplete>
+    </modules>
+    <global>
+        <blocks>
+            <turiknox_addressautocomplete>
+                <class>Turiknox_AddressAutocomplete_Block</class>
+            </turiknox_addressautocomplete>
+        </blocks>
+        <helpers>
+            <turiknox_addressautocomplete>
+                <class>Turiknox_AddressAutocomplete_Helper</class>
+            </turiknox_addressautocomplete>
+        </helpers>
+        <models>
+            <turiknox_addressautocomplete>
+                <class>Turiknox_AddressAutocomplete_Model</class>
+            </turiknox_addressautocomplete>
+        </models>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <turiknox_addressautocomplete>
+                    <file>turiknox/addressautocomplete.xml</file>
+                </turiknox_addressautocomplete>
+            </updates>
+        </layout>
+    </frontend>
+    <adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <autocomplete>
+                                            <title>Turiknox Address Autocomplete Section</title>
+                                        </autocomplete>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+    <default>
+        <autocomplete>
+            <usage>
+                <placeholder><![CDATA[Enter a location]]></placeholder>
+                <countries_as_admin2>BY,DK,ES,GB,TR</countries_as_admin2>
+            </usage>
+        </autocomplete>
+    </default>
+</config>

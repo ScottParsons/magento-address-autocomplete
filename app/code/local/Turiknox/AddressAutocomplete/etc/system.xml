@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<!--
+/*
+ * Turiknox_AddressAutocomplete
+
+ * @category   Turiknox
+ * @package    Turiknox_AddressAutocomplete
+ * @copyright  Copyright (c) 2017 Turiknox
+ * @license    https://github.com/Turiknox/magento-address-autocomplete/blob/master/LICENSE.md
+ * @version    1.0.0
+ */
+-->
+<config>
+    <tabs>
+        <turiknox translate="label">
+            <label>Turiknox</label>
+            <sort_order>1000</sort_order>
+        </turiknox>
+    </tabs>
+    <sections>
+        <autocomplete translate="label">
+            <label>Address Autocomplete</label>
+            <sort_order>10</sort_order>
+            <sort_order>10</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <tab>turiknox</tab>
+            <groups>
+                <general translate="label">
+                    <label>General</label>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enable translate="label">
+                            <label>Enable</label>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                        </enable>
+                        <key translate="label">
+                            <label>API Key</label>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <frontend_type>text</frontend_type>
+                            <comment><![CDATA[To retrieve your API key, click
+                            <a href="https://developers.google.com/maps/documentation/javascript/get-api-key" target="_blank">here</a>.<br/><br/>
+                            The standard quota starts at 1,000 free requests per 24 hour period. To learn about usage limits, click
+                            <a href="https://developers.google.com/places/web-service/usage" target="_blank">here</a>]]>
+                            </comment>
+                        </key>
+                    </fields>
+                </general>
+                <usage translate="label">
+                    <label>Usage</label>
+                    <sort_order>20</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <billing_field translate="label">
+                            <label>Billing Address Field To Use For Autocomplete</label>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <frontend_type>select</frontend_type>
+                            <source_model>turiknox_addressautocomplete/system_config_source_billing</source_model>
+                        </billing_field>
+                        <shipping translate="label">
+                            <label>Use Autocomplete For Shipping Address On Checkout</label>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                        </shipping>
+                        <shipping_field translate="label">
+                            <label>Shipping Address Field To Use For Autocomplete</label>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <frontend_type>select</frontend_type>
+                            <source_model>turiknox_addressautocomplete/system_config_source_shipping</source_model>
+                            <depends>
+                                <shipping>1</shipping>
+                            </depends>
+                        </shipping_field>
+                        <placeholder translate="label">
+                            <label>Placeholder Text To Use For Autocomplete Field</label>
+                            <sort_order>70</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <frontend_type>text</frontend_type>
+                        </placeholder>
+                        <countries_as_admin2 translate="label">
+                            <label>Use Administrative Area Level 2 For Countries</label>
+                            <sort_order>80</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>adminhtml/system_config_source_country</source_model>
+                            <can_be_empty>1</can_be_empty>
+                            <comment><![CDATA[The address 'region' is sometimes stored in the 'administrative_area_level_2' component.<br/>
+                            e.g. <strong>Greater Manchester</strong>, United Kingdom<br/><br/>
+                            Other countries store the region in 'administrative_area_level_1'<br/>
+                            e.g. <strong>Texas</strong>, United States]]></comment>
+                        </countries_as_admin2>
+                    </fields>
+                </usage>
+            </groups>
+        </autocomplete>
+    </sections>
+</config>

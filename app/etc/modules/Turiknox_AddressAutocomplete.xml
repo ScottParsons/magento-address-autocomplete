@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+/*
+ * Turiknox_AddressAutocomplete
+
+ * @category   Turiknox
+ * @package    Turiknox_AddressAutocomplete
+ * @copyright  Copyright (c) 2017 Turiknox
+ * @license    https://github.com/Turiknox/magento-address-autocomplete/blob/master/LICENSE.md
+ * @version    1.0.0
+ */
+-->
+<config>
+    <modules>
+        <Turiknox_AddressAutocomplete>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Turiknox_AddressAutocomplete>
+    </modules>
+</config>

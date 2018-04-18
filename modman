@@ -1,0 +1,5 @@
+app/code/local/Turiknox/AddressAutocomplete app/code/local/Turiknox/AddressAutocomplete
+app/etc/modules/Turiknox_AddressAutocomplete.xml app/etc/modules/Turiknox_AddressAutocomplete.xml
+app/design/frontend/base/default/layout/turiknox/addressautocomplete.xml app/design/frontend/base/default/layout/turiknox/addressautocomplete.xml
+app/design/frontend/base/default/template/addressautocomplete app/design/frontend/base/default/template/addressautocomplete
+js/turiknox js/turiknox
