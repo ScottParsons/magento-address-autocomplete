@@ -42,7 +42,7 @@
 
     <address_autocomplete>
         <reference name="head">
-            <action method="addItem">
+            <action method="addItem" ifconfig="autocomplete/general/enable">
                 <type>js</type>
                 <name>turiknox/addressautocomplete.js</name>
             </action>
