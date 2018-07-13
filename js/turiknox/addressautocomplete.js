@@ -72,7 +72,7 @@ var AddressAutocomplete = Class.create({
                 event.preventDefault();
                 this.element.blur();
             }
-        });
+        }.bind(this));
     },
 
     /**
